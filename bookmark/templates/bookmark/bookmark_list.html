@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>t1802 북마크 리스트 화면</title>
+
+<style>
+	body{
+		background: #F8E0E6;
+		font-size: 20px;
+	}
+</style>
+
+</head>
+
+<body>
+
+<div id="container">
+
+    <h1>t1802 북마크 리스트 화면</h1>
+
+    <ol>
+        {% for bookmark in object_list %}
+            <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li><br>
+        {% endfor %}
+    </ol>
+
+</div>
+
+
+
+</body>
+</html>
